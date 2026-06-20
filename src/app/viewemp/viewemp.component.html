@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="text-center">Employee Details</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of emparr">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.dept}}</td>
+                <td>{{emp.salary}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="update(emp.id)">Update</button>
+                    <button class="btn btn-danger" (click)="delete(emp.id)">Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
